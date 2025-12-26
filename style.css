@@ -1,0 +1,118 @@
+:root {
+    --glass: rgba(255, 255, 255, 0.15);
+    --border: rgba(255, 255, 255, 0.2);
+    --text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background-size: cover;
+    color: var(--text);
+}
+
+.container {
+    width: 90%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+/* Glassmorphism Search Bar */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    padding: 12px 20px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.search-box input::placeholder { color: #ddd; }
+
+.search-box button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.search-box button:hover { transform: scale(1.2); }
+
+/* Weather Card */
+.weather-card {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 40px 20px;
+    text-align: center;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.main-info img {
+    width: 150px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+}
+
+.main-info h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.main-info p {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Details Grid */
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.detail-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detail-item span {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.detail-item p {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}

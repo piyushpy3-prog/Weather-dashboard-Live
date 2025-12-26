@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast Elite | Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="search-box">
+            <i data-lucide="map-pin"></i>
+            <input type="text" placeholder="Enter city name..." id="cityInput">
+            <button id="searchBtn"><i data-lucide="search"></i></button>
+        </header>
+
+        <main class="weather-card" id="weatherCard">
+            <div class="main-info">
+                <img src="https://openweathermap.org/img/wn/10d@4x.png" id="weatherIcon" alt="Weather Icon">
+                <h1 id="temp">--°C</h1>
+                <p id="description">Cloudy Skies</p>
+                <h2 id="cityName">Delhi, India</h2>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-item">
+                    <i data-lucide="droplets"></i>
+                    <div>
+                        <span id="humidity">--%</span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i data-lucide="wind"></i>
+                    <div>
+                        <span id="windSpeed">-- km/h</span>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
